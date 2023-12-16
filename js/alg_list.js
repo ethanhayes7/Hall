@@ -1,3 +1,6 @@
+var oltp = {
+    "Cross": ["(U') R U R' U R U' R'", "(U') R' D' R U R' D R",	"(U) R U R' U' R U' R'", "(U') R U' R' U2 R U2 R'", "R U' R'", "(U') R U2 R' U2 R U2 R'", "(U) L R U' R' U L'", "(U) R U R'", "R2 D R' U' R D' R2", "r' F R F' M'", "(U) R U2 R'", "R U' R' U R U' R'", "R U' R' U2 R U' R'", "(U') R U2 R' U R U' R'", "(U') R U R' U' R U R'", "(U') R U R' U R U2 R'", "R' U' R U' R' U2 R", "(U) R U R2 U2 R U R' U R", "(U2) R' U' R U' R' U2 R2 U R'", "(U) R U' R2 U2 R U R' U R", "(U2) R U2 R' U2 R U' R'", "R U R' U R U' R' U R U' R'", "R U R' U2 R' U' R U' R' U2 R"]
+
 var eg_full = {
     "S": ["(U') F' L U2 F2 R U' x'", "R U R' F2 U F R U R' ", "(U') R' F R U2 R U' R2 F2 R F'","F' U R U' R' U F R U R'", "(U) R U' R' U R U' R' U F R U' R'", "R' F R2 U' R' U L F' L' F"],
     "AS": ["(U') B U' R2 F2 U' F" , "(U) R U' R' F' U' F2 R U' R'","F' R U R' U' R U R2' F' R","R U' R' F' U' R U R' U' F", " (U') R U R' F' U' R U R' U' R U R'", "(U2) R U' R2 F R U' R' F R F'"],
