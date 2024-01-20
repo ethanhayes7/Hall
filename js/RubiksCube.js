@@ -699,6 +699,18 @@ function generateAlgScramble(raw_alg,set,obfusticateAlg,shouldPrescramble){
             return generatePreScramble(raw_alg, "RBR'FRB'R'F',RUR'URU2R',U,R'U'RU'R'U2R,F2U'R'LF2L'RU'F2", 1000, true, getRandAuf("D")); // ZBLL-ABF scramble
         default:  
             return obfusticate(alg.cube.invert(raw_alg));
+
+	case "OU EOPair":
+	    return generatePreScramble(raw_alg, "R' U' R U R, R U R', U, R U R' U R U2 R', R U R' F' R U R' U' R' F R2 U' R', M2 U M U2 M' U M2", 10000, true);
+	case "OR EOPair":
+	    return generatePreScramble(raw_alg, "R' U' R U R, R U R', U, R U R' U R U2 R', R U R' F' R U R' U' R' F R2 U' R', M2 U M U2 M' U M2", 10000, true);
+	case "MU EOPair":
+	    return generatePreScramble(raw_alg, "R' U' R U R, R U R', U, R U R' U R U2 R', R U R' F' R U R' U' R' F R2 U' R', M2 U M U2 M' U M2", 10000, true);
+	case "MR EOPair":
+	    return generatePreScramble(raw_alg, "R' U' R U R, R U R', U, R U R' U R U2 R', R U R' F' R U R' U' R' F R2 U' R', M2 U M U2 M' U M2", 10000, true);
+
+	case "LXS":
+	    return generatePreScramble(raw_alg, "R U R' U R U2 R', R U R' F' R U R' U' R' F R2 U' R', M2 U M U2 M' U M2", 1000, true);
     }
 
 }
