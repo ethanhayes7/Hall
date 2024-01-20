@@ -1,3 +1,27 @@
+var ou = {
+	"2 Flip": ["(U2) F R' F' U R", "(U') R U f' U f", "(U') F R2 U R' U' F'", "(U2) F' U F R", "(U') F R F'", "(U2) R' F' U F R", "(U') F' U' F U R", "(U') R F' U' F", "(U) f R' f' U' R", "(U') R f' U f", "(U') R F' U2 F", "(U') R f' U' f", "(U') R F' U F", "(U2) R2 F' U F R", "(U2) R' U F R F'"],
+	"4 Flip": ["(U) R' U' R S R' S' U' R", "(U) R' U2 R S' U' S", "(U') R U2 S' U' S", "(U') D' r U' r' D R", "(U2) S' U' R' U2 R S", "(U') R U' S' U' S", "S' U R U2 R' S R2", "S' U R' U2 R S", "(U') R U S' U S", "(U2) R' U R S' U S", "(U') R S' U S", "(U2) S R S' R2 F' U F R", "(U') R2 U' R' S' U' S", "(U2) R2 S R S' U R"],
+	"6 Flip": ["(U') R F R' F' R U S' U' S"]
+};
+
+var or = {
+	"2 Flip": ["(U') R' U' F' U F R'", "R' U R' U' F' U' F", "(U) F R' F' R2", "F R' F' R U R U' R", "(U') R' U' R f R f' R2", "R' U R' F' U' F", "R' U' R' F' U F", "R2 U' F' U F", "R' f R f' R'", "R2 F' U' F", "f' U' f R'", "(U) f R' f' R2", "R U' F' R' U R F", "R U2 R' f R' f' U' R", "R2 F' U F"],
+	"4 Flip": ["R2 U2 S' U' S", "(U') S' U S R2'", "S R U' R' U R S'", "(U2) S' U' S U' R2", "R U2 R' U S R S' U R", "(U) S' U' S R2", "f R U R' U' R' f' R2", "R2 S' U' S", "R U R' S R S' U' R", "R D' r U' r' D R", "R' f R U R U' R' f' R'", "R U' R2 S R S' U R", "R' U2 R U S' U' S R2", "f R' S' R F' R2", "(U) R' S R S' R U' R2"],
+	"6 Flip": ["(U2) D r' U' r D' F R' F' R2"],
+};
+
+var mu = {
+	"2 Flip": ["(U) R' F' U' F R", "(U2) R F R2 F'", "r' U' R U M'", "(U') F' U' F R2", "(U2) R' F R2 F'", "(U) f R' f'"],
+	"4 Flip": ["(U') R U2 R U R' S R' S'", "(U') R' D' r U r' U' D R", "(U2) F R2 f' U' S", "(U) R D r' U' r D' R'", "(U') R2 D r' U r D' R'", "R' U' S R S'", "(U') R D r' U r D' R'", "(U') f U R' U' F' R S'", "(U) S' U' S R' U' R", "(U) R U R' S R' S'", "(U2) R' f' U' f2 R2 f'", "(U2) f' U' f2 R2 f'", "R' S' U' S R", "(U') D' r U r' U' D R", "(U2) R' S R F R2 f'", "(U) f' R' U2 R f", "S' U' R U R' U' S R", "(U') D r' U r D' R'", "(U2) S R' F R2 f'", "(U') R2 U R' S' U' S R"],
+	"6 Flip": ["D' r U' r' D r' U' R U M'", "(U') D r' U r D' R2 F R F'", "(U) R D r' U' r D' R2 F R F'", "D r' U' r D' R F R' F'", "(U) D' r U' r' D R U R' f R' f'", "(U2) S R S' R' f R2 f'"],
+};
+
+var mr = {
+	"2 Flip": ["F R2 F' U' R", "R2 F' U' F R", "(U') f R f' R' U2 R2", "R' U2 F' U' F R2", "R' U R' F R2 F'", "R' f R' f'"],
+	"4 Flip": ["S R U' R' U R S' R", "R U2 R' U S R S' R", "(U) R2 U' R S R' S'", "R U' R' S R S' R' U R2", "R U' R' U S R S' R", "R D' r U' r' D R2", "(U') R U' R' U' S R S' R", "D r' U' r D' R'", "S R' f' U2 F R", "R' f' R' U2 R f", "(U') f' R' U2 R f R", "S' U' R' U2 R S R", "S R S' R' U R2", "R' S R S' U R2", "(U) S R S' R", "(U) R' S R' S'", "R U D' r U' r' D R2", "(U2) S R S' R' f R' f' R2", "(U) R' U2 R2 S R S'", "R U' R2 f' R' U2 R f"],
+	"6 Flip": ["(U2) F R' F' R2 D r' U r D'", "D r' U' r D' R2 F R F'", "S R S' R2 F R' F'", "(U') R' D' r U r' D f R' f'", "R' B' R2 B R' S R S' R", "(U) S R S' r U R U' r'"]
+};
+
 var oltp = {
     "Cross": ["(U') R U R' U R U' R'", "(U') R' D' R U R' D R",	"(U) R U R' U' R U' R'", "(U') R U' R' U2 R U2 R'", "R U' R'", "(U') R U2 R' U2 R U2 R'", "(U) L R U' R' U L'", "(U) R U R'", "R2 D R' U' R D' R2", "r' F R F' M'", "(U) R U2 R'", "R U' R' U R U' R'", "R U' R' U2 R U' R'", "(U') R U2 R' U R U' R'", "(U') R U R' U' R U R'", "(U') R U R' U R U2 R'", "R' U' R U' R' U2 R", "(U) R U R2 U2 R U R' U R", "(U2) R' U' R U' R' U2 R2 U R'", "(U) R U' R2 U2 R U R' U R", "(U2) R U2 R' U2 R U' R'", "R U R' U R U' R' U R U' R'", "R U R' U2 R' U' R U' R' U2 R"],
 };
